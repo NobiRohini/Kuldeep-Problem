@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    FILE*fp;
+    int s1,s2,s3,s4,s5;
+    printf("enter the values");
+    scanf("%d%d%d%d%d",&s1,&s2,&s3,&s4,&s5);
+    fclose(fp);
+    fp=fopen("kuldeep.txt","w");
+    fprintf(fp,"%d%d%d%d%d",s1,s2,s3,s4,s5);
+    fclose(fp);
+    fp=fopen("kuldeep.txt","r");
+    fscanf(fp,"%d%d%d%d%d",&s1,&s2,&s3,&s4,&s5);
+    printf("%d%d%d%d%d",s1,s2,s3,s4,s5);
+    fclose(fp);
+}
